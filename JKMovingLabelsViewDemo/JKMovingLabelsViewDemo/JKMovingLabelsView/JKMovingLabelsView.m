@@ -94,7 +94,9 @@
         CGRect frame = [dataArray[i] boundingRectWithSize:CGSizeMake(MAXFLOAT, 1) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
         self.totalLength += ((frame.size.width > self.colWidth/2.0 ? frame.size.width : self.colWidth/2.0) + self.minSpace);
     }
+    [self.collection setContentOffset:(CGPointZero)];
     [self.collection reloadData];
+    
 }
 
 #pragma mark - funcs
